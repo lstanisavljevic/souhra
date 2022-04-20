@@ -1,0 +1,24 @@
+.deck {
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 4em);
+		grid-template-rows: repeat(4, 4em);
+		grid-gap: var(--spacing-sml);
+
+		@media (min-width: 360px) {
+			grid-template-columns: repeat(3, 5.5em);
+			grid-template-rows: repeat(4, 5.5em);
+			grid-gap: var(--spacing-sml);
+		}
+
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(3, 6em);
+			grid-template-rows: repeat(4, 6em);
+			grid-gap: var(--spacing-sml);
+		}
+	}
+}
+.offline-card {
+	width: 100%;
+	padding: 6.25vh 3.25vw;
+}

@@ -1,0 +1,65 @@
+@import './motion.scss';
+
+.form {
+	max-width: 20rem;
+	margin: auto;
+
+	@media (min-width: 768px) {
+		margin: 0;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	label {
+		display: block;
+	}
+
+	input, select {
+		width: 100%;
+		background-color: var(--gray-lighten-15);
+		padding: 0 0.75rem;
+		border: 1px solid transparent;
+		border-radius: var(--border-radius);
+		height: 2.5rem;
+		color: var(--text);
+		transition: border-color $d-normal $ease-in-out,
+			color $d-normal $ease-in-out;
+		font-size: 1em;
+		text-align: left;
+
+		&:focus {
+			border-color: var(--off-white-darken-15);
+			outline: none;
+		}
+	}
+
+	&--item {
+		margin-bottom: 1em;
+	}
+
+	&__error {
+		color: var(--error);
+		font-size: 15px;
+		padding: 10px 0 0;
+		border-top: 1px var(--error) solid;
+		max-width: 20rem;
+		animation: expand 0.5s ease-in-out;
+	}
+
+	&__divider {
+		display: flex;
+		flex-basis: 100%;
+		align-items: center;
+		margin: var(--spacing-base) 0px;
+	}
+	&__divider::before,
+	&__divider::after {
+		content: '';
+		flex-grow: 1;
+		background: rgba(0, 0, 0, 0.35);
+		height: 1px;
+		margin: 0px var(--spacing-base);
+	}
+}

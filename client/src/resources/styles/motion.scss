@@ -1,0 +1,77 @@
+// Easings
+$ease-in: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$ease-in-qubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+$ease-out: cubic-bezier(0.165, 0.84, 0.44, 1);
+$ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$ease-out-qubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+$ease-in-out: cubic-bezier(1, 0, 0.25, 1);
+$ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+$ease-in-out-qubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// Durations
+$d-fast: 0.125s;
+$d-normal: 0.25s;
+$d-slow: 0.5s;
+$d-slower: 1s;
+$d-slowest: 1.5s;
+
+@keyframes fade-in {
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes appear {
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes disappear {
+	to {
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes expand {
+	from {
+		opacity: 0;
+	}
+}
+
+@keyframes slideCard {
+	0% {
+		opacity: 0;
+		transform: translateX(80rem); /* animate in x direction */
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+.slide-card {
+	transform: translateX(80rem);
+	animation: slideCard 1s cubic-bezier(0.05, 0.98, 0.17, 0.97) forwards;
+}
+.slide-card:nth-child(1) {
+	animation-delay: 0s;
+}
+.slide-card:nth-child(2) {
+	animation-delay: 0.2s;
+}
+.slide-card:nth-child(3) {
+	animation-delay: 0.5s;
+}
+
+@keyframes loading-indicator {
+	0% {
+		transform: translate3d(-100%, 0, 0);
+	}
+	100% {
+		transform: translate3d(100vw, 0, 0);
+	}
+}

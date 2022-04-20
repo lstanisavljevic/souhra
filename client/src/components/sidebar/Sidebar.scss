@@ -1,0 +1,16 @@
+.aside {
+	background-color: var(--anthracite);
+	color: var(--text-invert);
+	overflow: hidden;
+
+	.aside__msg {
+		overflow: hidden;
+		text-align: center;
+		max-height: 5em;
+	}
+	@media (max-width: 768px) {
+		.logo-container {
+			display: none;
+		}
+	}
+}

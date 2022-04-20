@@ -1,0 +1,7 @@
+.offline-message {
+	@media (max-width: 768px) {
+		&--light {
+			color: var(--text);
+		}
+	}
+}

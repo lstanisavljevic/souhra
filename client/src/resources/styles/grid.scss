@@ -1,0 +1,121 @@
+.grid {
+	display: grid;
+	width: 100%;
+	height: 100%;
+	grid-template-rows: [row1] 8em [row2] 1fr [row3] 1fr [message] 3rem [row4] 1fr [row5] 1fr [row6] 1fr;
+
+	.g-aside--user {
+		padding: 6.25vh 3.25vw;
+		align-items: center;
+		grid-row: row1 / row2;
+	}
+
+	.g-aside--admin {
+		grid-row: row7;
+		padding: 1em;
+	}
+
+	.g-aside-login {
+		padding: 6.25vh 3.25vw;
+		grid-row: row1 / row3;
+	}
+
+	.g-message {
+		grid-row: message;
+	}
+
+	.g-show-offline {
+		grid-row: row7;
+		padding: 1em;
+	}
+
+	.g-top {
+		padding: 6.25vh 3.25vw;
+		grid-row: row1 / message;
+	}
+
+	.g-login {
+		grid-row: row3 / span all;
+		padding: 6.25vh 3.25vw;
+	}
+
+	.g-bottom {
+		padding: 2em;
+		grid-row: row4 / row6;
+	}
+
+	.g-middle {
+		padding: 6.25vh 6.25vw;
+		margin: auto;
+		grid-row: row2 / row5;
+	}
+
+	.g-centered {
+		grid-row: row3/row5;
+		align-self: center;
+		justify-self: center;
+	}
+
+	@media (min-width: 768px) {
+		grid-template-columns: [aside-start] 160px [aside-end] 160px [body-start] 1fr [body-end] 1fr [content-end] 1fr [main-end];
+		grid-template-rows: [row1] 1.5fr [row2] 1fr [row3] 1fr [message] 3rem [row4] 1fr [row5] 1fr [row6] 1fr [row7];
+
+		.g-aside--admin,
+		.g-aside--user {
+			grid-column: aside-start / body-start;
+			grid-row: row1 / row7;
+		}
+
+		.g-message {
+			grid-row: message;
+			grid-column: body-end;
+		}
+
+		.g-aside-login {
+			grid-column: aside-start / body-start;
+			grid-row: row1 / row7;
+		}
+
+		.g-middle {
+			grid-column: body-end;
+			grid-row: row2 / row5;
+			align-self: center;
+			margin: 0;
+		}
+
+		.g-middle--large,
+		.g-login {
+			grid-column: body-start / main-end;
+			grid-row: row3 / row5;
+			align-self: center;
+		}
+
+		.g-top {
+			grid-column: body-start / span all;
+			grid-row: row1 / row4;
+		}
+
+		.g-bottom {
+			grid-column: body-start / span all;
+			grid-row: row4 / span all;
+		}
+
+		.g-full {
+			grid-column: body-start / content-end;
+			grid-row: row1 / span all;
+			justify-content: center;
+		}
+
+		.g-show-offline {
+			grid-row: row6;
+			grid-column: body-end;
+			max-width: 16rem;
+			margin: 0 auto;
+		}
+
+		.g-centered {
+			grid-row: row2/row5;
+			grid-column: body-end;
+		}
+	}
+}

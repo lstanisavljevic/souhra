@@ -1,0 +1,18 @@
+.qr-code-scanner--btn {
+	position: relative;
+	top: -2.5em;
+	left: 90%;
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	background: url('/qr_icon.svg') 50% 50% no-repeat;
+	cursor: pointer;
+}
+
+.qr-code-scanner--btn > button {
+	position: absolute;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+}

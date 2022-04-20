@@ -1,0 +1,85 @@
+:root {
+	--arsenic: #56c271;
+	--anthracite: #25282a;
+	--white: #fff;
+	--debug: rgba(172, 58, 50, 0.5);
+	--error: #c45757;
+
+	--off-white-base: #f9f8f7;
+	--off-white-darken-5: #edebe8;
+	--off-white-darken-10: #e2ded9;
+	--off-white-darken-15: #d8d1cb;
+
+	--off-grey: #d7d3cc;
+	--light-grey: #efece8;
+
+	--background-light: #f9f8f7;
+
+	--brand-base: var(--arsenic);
+	--brand-lighten-05: #69c981;
+	--brand-lighten-10: #7cd091;
+	--brand-lighten-15: #8fd6a1;
+	--brand-lighten-20: #a1ddb0;
+	--brand-darken-05: #44bb62;
+	--brand-darken-10: #3da958;
+	--brand-darken-15: #36964e;
+	--brand-darken-20: #2f8344;
+
+	--gray-base: #24282a;
+	--gray-darken-05: #858585;
+	--gray-darken-10: #787878;
+	--gray-darken-15: #6b6b6b;
+	--gray-lighten-05: #9e9e9e;
+	--gray-lighten-10: #ababab;
+	--gray-lighten-15: #e7e7e7;
+
+	--silver-base: #c7c9c7;
+	--silver-darken-05: #b9bcb9;
+	--silver-darken-10: #acafac;
+	--silver-darken-15: #9fa39f;
+	--silver-lighten-05: #d3d5d3;
+	--silver-lighten-10: #ababab;
+	--silver-lighten-15: #edeeed;
+	--silver-lighten-15-20: #edeeedbb;
+
+	--dark-base: var(--anthracite);
+	--dark-darken-05: #171a1c;
+	--dark-darken-10: #0c0d0e;
+	--dark-lighten-05: #2f3437;
+	--dark-lighten-10: #3b4145;
+	--dark-lighten-15: #464f53;
+	--dark-lighten-20: #525c60;
+
+	--text: var(--dark-base);
+	--text-invert: #d8d8d8;
+
+	--line: var(--gray-lighten-15);
+
+	--font: 'Brando Sans', sans-serif;
+
+	/* Components */
+
+	/** Block */
+	--spacing-base: 8px;
+	--spacing-xxs: calc(var(--spacing-base) / 2); // 4px
+	--spacing-xs: calc(var(--spacing-base)); // 8px
+	--spacing-sml: calc(var(--spacing-base) * 2); // 16px
+	--spacing-med: calc(var(--spacing-base) * 3); // 24px
+	--spacing-lrg: calc(var(--spacing-base) * 6); // 48px
+	--spacing-xl: calc(var(--spacing-base) * 8); // 64px
+	--spacing-xxl: calc(var(--spacing-base) * 12); // 96px
+	--spacing-xxxl: calc(var(--spacing-base) * 16); // 128px
+
+	--bottom-bar: var(--spacing-xxl);
+
+	--border-radius: 2px;
+	--border-radius-btn: 2px;
+
+	--box-shadow-playingcard: 0 5px 0 0 rgba(0, 0, 0, 0.2),
+		0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+	--box-shadow-playingcard--pressed: 0 1px 0 0 rgba(0, 0, 0, 0.14),
+		0 1px 3px 0 rgba(0, 0, 0, 0.12);
+	--box-shadow--sharp: 0 1px 1px rgba(0, 0, 0, 0.12),
+		0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12),
+		0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+}

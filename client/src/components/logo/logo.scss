@@ -1,0 +1,13 @@
+.logo-container {
+	margin-bottom: var(--spacing-sml);
+
+	&.logo--light {
+		g.mirabeau-logo {
+			fill: #9ea2a2;
+		}
+	}
+
+	@media (min-width: 768px) {
+		display: block;
+	}
+}

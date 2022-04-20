@@ -1,0 +1,29 @@
+/* Screenreader
+----------------------------------------
+
+h5bp.com/v
+
+Hide content visually, but have it available for screenreaders. Opposite of aria-hidden="true" in a sense.
+
+*/
+
+@mixin screenreader() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.screenreader {
+  @include screenreader;
+}
+
+.hide {
+  display: none !important;
+}

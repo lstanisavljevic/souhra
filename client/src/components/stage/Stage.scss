@@ -1,0 +1,43 @@
+.stage {
+	background-color: var(--silver-lighten-15);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	&__user {
+		user-select: none;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%);
+		color: var(--brand-darken-20);
+		border-radius: var(--spacing-xs);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&--current {
+			font-weight: bold;
+		}
+	}
+	&__level {
+		position: absolute;
+		bottom: var(--spacing-base);
+		left: var(--spacing-base);
+		padding: 0;
+		border: none;
+		background: none;
+		font-size: 2rem;
+	}
+	&--words {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-size: 2rem;
+		background: var(--silver-lighten-15-20);
+		&__text {
+			user-select: none;
+		}
+	}
+}

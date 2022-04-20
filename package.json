@@ -1,0 +1,35 @@
+{
+  "name": "scrum-poker-app",
+  "version": "1.0.0",
+  "description": "Scrum Poker app that makes estimation of 'story points'",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start_local": "nodemon -r dotenv/config server.js",
+    "production": "node server.js",
+    "deploy": "eb deploy ScrumPokerApp-env",
+    "dev": "npm i && npm run start & (cd client && npm i && npm run start)"
+  },
+  "author": "Sylwia Calka",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.0.0",
+    "helmet": "^3.21.2",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.18.2"
+  }
+}

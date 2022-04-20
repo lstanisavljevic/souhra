@@ -1,0 +1,17 @@
+{   
+    "appStatus": {
+        "waiting": "waiting",
+        "voting": "voting",
+        "results": "results",
+        "activeUserChange": "activeUserChange",
+        "initial": "initial"
+    },
+    "serverMessages": {
+        "waiting": "Waiting for participants...",
+        "connected": "You are now connected ",
+        "disconnected": "disconnected",
+        "newRound": "New poker round. Waiting for everyone to vote…",
+        "discussion": "Let's discuss",
+        "pokerSelected": "You have made the following choice: "
+      }
+}

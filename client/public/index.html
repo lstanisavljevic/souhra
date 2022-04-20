@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=5"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content="Scrum poker game"/>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+
+    <!-- icon in the highest resolution we need it for -->
+    <link rel="icon" sizes="192x192" href="%PUBLIC_URL%/apple-icon-180.png">
+
+    <!-- reuse same icon for Safari -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-icon-180.png">
+
+    <link href="%PUBLIC_URL%/splashscreens/apple-splash-640-1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+    <link href="%PUBLIC_URL%/splashscreens/apple-splash-750-1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+    <link href="%PUBLIC_URL%/splashscreens/apple-splash-1242-2208.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image"/>
+    <link href="%PUBLIC_URL%/splashscreens/apple-splash-828-1792iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image"/>
+    <link href="%PUBLIC_URL%/splashscreens/apple-splash-828-1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+    <link href="%PUBLIC_URL%/splashscreens/apple-splash-1242-2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image"/>
+    <link href="%PUBLIC_URL%/splashscreens/apple-splash-1536-2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+    <link href="%PUBLIC_URL%/splashscreens/apple-splash-1668-2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+    <link href="%PUBLIC_URL%/splashscreens/apple-splash-1668-2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+    <link href="%PUBLIC_URL%/splashscreens/apple-splash-2048-2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+
+    <!-- status bar appearence -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- Allow web app to be run in full-screen mode. -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>Mirabeau Scrum Poker</title>
+    <style>
+      @keyframes loading-indicator {
+        0% {
+          transform: translate3d(-100%, 0, 0);
+        }
+        100% {
+          transform: translate3d(100vw, 0, 0);
+        }
+      }
+
+      body {
+        background-color: #f9f8f7;
+        color: #25282a;
+        overflow-x: hidden;
+        font-family: sans-serif;
+      }
+
+      noscript {
+        display: block;
+        padding: 2em;
+      }
+
+      #root:empty::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 125vw;
+        height: 4px;
+        background-color: #56c271;
+        background: linear-gradient(90deg,rgba(86,194,113,0),#56c271 33%);
+        animation: loading-indicator 2s cubic-bezier(.645,.045,.355,1) infinite;
+      }
+      #notification {
+        position: absolute;
+        top: 0;
+        display: none;
+      }
+      #notification.show {
+        display: block;
+        background-color: #f9f8f7;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="notification">A new version of this app is available. Please close and re-open this tab.
+    </div>
+    <script>
+      window.addEventListener('load', function () {
+        const status = document.getElementById("root");
+
+        const updateOnlineStatus = (className = '') => {
+          const condition = navigator.onLine
+            ? `online ${className}`
+            : "offline";
+
+          status.className = condition;
+        }
+
+        window.addEventListener('online', () => updateOnlineStatus('was-offline'));
+        window.addEventListener('offline', () => updateOnlineStatus());
+        updateOnlineStatus()
+      });
+      document
+        .getElementById('reload')
+        .addEventListener('click', function () {
+
+          const channel = new BroadcastChannel('sw-messages');
+          channel.postMessage({title: 'Hello from SW'});
+        });
+    </script>
+
+  </body>
+</html>

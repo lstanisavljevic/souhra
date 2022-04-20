@@ -1,0 +1,17 @@
+.poker-results-card {
+	padding: var(--spacing-base);
+	max-width: 12em;
+
+	&__usernames {
+		word-break: break-all;
+		word-break: break-word;
+		hyphens: auto;
+		overflow-y: auto;
+		height: 5em;
+		padding-top: var(--spacing-base);
+
+		li {
+			max-height: 3em;
+		}
+	}
+}

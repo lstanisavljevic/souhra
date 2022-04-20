@@ -1,0 +1,31 @@
+.participants-group {
+	background-color: var(--off-white-base);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: flex-start;
+		width: 100%;
+		max-height: 20rem;
+		overflow: scroll;
+
+		li {
+			min-width: 6em;
+			min-height: 12em;
+			flex-shrink: 1;
+			flex-basis: 0;
+			margin: 0.5em;
+
+			@media (max-width: 768px) {
+				min-width: 6em;
+				min-height: 9em;
+			}
+		}
+	}
+}

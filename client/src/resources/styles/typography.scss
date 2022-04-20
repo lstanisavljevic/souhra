@@ -1,0 +1,113 @@
+@font-face {
+	font-family: 'Brando Sans';
+	src: local('Brando Sans SemiBold'), local('BrandoSans-SemiBold'),
+		url('../fonts/BrandoSans-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Brando Sans';
+	src: local('Brando Sans Light'), local('BrandoSans-Light'),
+		url('../fonts/BrandoSans-Light.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+	font-family: var(--font);
+}
+
+body {
+	font-family: var(--font);
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--text);
+	overflow-wrap: break-word;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+h1 {
+	margin: 0;
+	font-weight: normal;
+	font-size: 1.6rem;
+	line-height: 1.25;
+	overflow-wrap: break-word;
+
+	@media (min-width: 768px) {
+		line-height: 1.22222;
+	}
+
+	@media (min-width: 1024px) {
+		line-height: 1.16667;
+	}
+}
+
+h2 {
+	margin: 0;
+	font-weight: normal;
+	font-size: 1.3rem;
+	line-height: 1.25;
+	overflow-wrap: break-word;
+
+	@media (min-width: 768px) {
+		line-height: 1.22222;
+	}
+
+	@media (min-width: 1024px) {
+		line-height: 1.16667;
+	}
+}
+
+p {
+	margin: 0 0 var(--spacing-sml);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+ul,
+ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.heading {
+	font-size: 1.17rem;
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+.smallcaps {
+	font-feature-settings: 'smcp';
+	font-size: 1.8rem;
+}
+
+textarea.btn--like {
+	resize: none;
+	font-size: 0.9rem;
+	&:focus {
+		outline: none;
+	}
+}
+
+@media (max-width: 480px) {
+	:root {
+		font-size: 90%;
+	}
+}
+
+@media (max-width: 480px) {
+	:root {
+		font-size: 80%;
+	}
+}

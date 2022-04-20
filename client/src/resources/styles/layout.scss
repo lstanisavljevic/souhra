@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--off-white-base);
+	background-image: url('/bg-noise.png');
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.login {
+	background-color: var(--off-white-base);
+}
+
+.vertical-grid {
+	display: grid;
+
+	@media (min-width: 768px) {
+		grid-template-rows: [logo] 1fr [mid] 3fr [actions] 1fr;
+
+		&__logo {
+			grid-row: logo;
+			align-self: flex-start;
+		}
+
+		&__content {
+			grid-row: mid;
+			align-self: center;
+		}
+
+		.btn-group {
+			grid-row: actions;
+			align-self: flex-end;
+		}
+	}
+}
+
+.hide-mobile {
+	@media (max-width: 768px) {
+		display: none;
+	}
+}

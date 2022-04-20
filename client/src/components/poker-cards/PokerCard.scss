@@ -1,0 +1,26 @@
+.poker-card {
+	border-radius: 0.25rem;
+	background-color: var(--anthracite);
+	background-image: url('/bg-noise.png');
+	box-shadow: var(--box-shadow--sharp);
+	fill: var(--text-invert);
+
+	rect {
+		fill: transparent;
+		//mix-blend-mode: multiply;
+		border-radius: 10px;
+		stroke: var(--text-invert);
+		stroke-width: 0.375;
+		stroke-miterlimit: 1;
+		stroke-dasharray: 1 2.2;
+		stroke-linecap: round;
+	}
+
+	&__status {
+		fill: var(--text-invert);
+		font-feature-settings: 'lnum';
+		text-anchor: middle;
+		dominant-baseline: middle;
+		font-size: 150%;
+	}
+}

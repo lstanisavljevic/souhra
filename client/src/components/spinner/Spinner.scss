@@ -1,0 +1,11 @@
+.spinner {
+	content: '';
+	position: absolute;
+	top: 0;
+	width: 125vw;
+	height: 4px;
+	background-color: #56c271;
+	background: linear-gradient(90deg, rgba(86, 194, 113, 0), #56c271 33%);
+	animation: loading-indicator 2s cubic-bezier(0.645, 0.045, 0.355, 1)
+		infinite;
+}
